@@ -39,22 +39,22 @@ MediChain is a web application built using ASP.NET Core with Entity Framework Co
 
 Clone the repository to your local machine using Git:
 
-bash
+```bash
 git clone https://github.com/jeetbhuptani/MediChainMVC.git
-
+```
 
 ### Navigate to the Project Directory
 Once cloned, navigate to the project folder:
-bash
+```bash
 cd MediChain
-
+```
 
 ### Install the Required Dependencies
 Run the following command to restore all necessary NuGet packages and dependencies:
 
-bash
+```bash
 dotnet restore
-
+```
 
 ### Configure the Database
 By default, the project is set up to use MSSQL, but you can configure it to use SQLite as well. To do this, modify the appsettings.json file.
@@ -62,37 +62,38 @@ By default, the project is set up to use MSSQL, but you can configure it to use 
 #### For MSSQL (default):
 Ensure that the appsettings.json file contains the following configuration:
 
-bash
+```bash
 "ConnectionStrings": {
   "DefaultConnection": "Server=(localdb)\\MSSQLLocalDB;Database=MediChain;Trusted_Connection=True;TrustServerCertificate=True"
 }
-
+```
 
 #### For SQLite:
 If you prefer to use SQLite, change the connection string to:
 
-bash
+```bash
 "ConnectionStrings": {
   "DefaultConnection": "Data Source=MediChain.db"
 }
-
+```
 
 Make sure to update the connection string according to your preferred setup.
 
 ### Apply Database Migrations
 To set up the database schema and apply the migrations, run the following command:
 
-bash
+```bash
 dotnet ef database update
+```
 
 This command ensures that the database is properly created and configured based on the latest migrations.
 
 ### Run the Application
 After completing all the above steps, you can start the MediChain web application by running the following command:
 
-bash
+```bash
 dotnet run
-
+```
 ## System Designs
 ### Architecture and Work Flow
 ![Work Flow](images/Flow.jpg)
