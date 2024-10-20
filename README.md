@@ -93,7 +93,12 @@ After completing all the above steps, you can start the MediChain web applicatio
 bash
 dotnet run
 
+## System Designs
+### Architecture and Work Flow
+![Work Flow](images/Flow.jpg)
 
+### Entity Relationship
+![ER](images/ER.jpg)
 
 ### Members
 <a href="https://github.com/kavyashah26" target="_blank">
