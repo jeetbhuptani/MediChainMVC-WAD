@@ -111,7 +111,6 @@ namespace MediChain.Controllers
 
         public IActionResult OrderConfirmation(int id)
         {
-
             OrderHeader orderHeader = _unitOfWork.OrderHeader.Get(u => u.Id == id, includeProperties: "AppUser");
             _unitOfWork.OrderHeader.UpdateStatus(orderHeader.Id, SD.StatusInProcess);
             List<ShoppingCart> shoppingCarts = _unitOfWork.ShoppingCart.GetAll(u => u.AppUserId == orderHeader.AppUserId).ToList();       

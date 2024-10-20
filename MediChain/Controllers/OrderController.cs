@@ -40,7 +40,7 @@ namespace MediChain.Controllers
 			OrderVM = new()
 			{
 				OrderHeader = _unitOfWork.OrderHeader.Get(u => u.Id == orderId, includeProperties: "AppUser"),
-				OrderDetail = _unitOfWork.OrderDetail.GetAll(o => o.Id == orderId, includeProperties: "Product")
+				OrderDetail = _unitOfWork.OrderDetail.GetAll(o => o.OrderHeaderId == orderId, includeProperties: "Product")
 			};
 			return View(OrderVM);
 		}
